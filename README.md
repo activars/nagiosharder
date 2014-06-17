@@ -54,9 +54,14 @@ Or just muted services, sorted desc by duration:
       :sort_option  => :state_duration,
     )
 
-Or get the details for a single service group:
+Or get the details for a single service group, default is 'all':
 
     site.service_status(:group => "AWESOME")
+    
+Or filter details for hostgroup, default is 'all':
+    
+    site.service_status(:hostgroup => "apiservices")
+
 
 Schedule a host to have services checks run again right now:
 

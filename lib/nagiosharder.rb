@@ -246,6 +246,7 @@ class NagiosHarder
 
       if @version == 3
         params['servicegroup'] = options[:group] || 'all'
+        params['hostgroup']    = options[:hostgroup] || 'all'
         params['style'] = 'detail'
         params['embedded'] = '1'
         params['noheader'] = '1'
@@ -253,6 +254,9 @@ class NagiosHarder
       else
         if options[:group]
           params['servicegroup'] = options[:group]
+          params['style'] = 'detail'
+        elsif options[:hostgroup]
+          params[:hostgroup] = options[:hostgroup]
           params['style'] = 'detail'
         else
           params['host'] = 'all'
