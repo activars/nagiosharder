@@ -20,6 +20,7 @@ pkg
 
 ## PROJECT::SPECIFIC
 nagiosharder*.gem
+Gemfile.lock
 .bundle
 vendor/gems
 config
